@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<!--no longer required to unload project for editing project file in .net core-->
+  <PropertyGroup>
+    <!--netcoreapp2.2 is the target framework moniker(TFM) for this target framework-->
+    <!--nomencleture for tfm
+    name=.NetFramework Abbreviation=net version=4.5.1 TFM=net451
+    name=.NetFramework Abbreviation=net version=4.7.2 TFM=net472
+    name=.NetCore Abbreviation=netcoreapp version=2.2 TFM=netcoreapp2.2-->
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    
+    <!--this tag defines how to host our app
+    InProcess hosting model hosts the app inside of the IIS worker process(w2wp.exe)
+    OutOfProcess hosting model forward web request to a backend ASP.NET core app running the kestrel server-->
+    <!--with OutOfProcess hosting has2 web server internal(kestrel) and external(IIS ,Nginx or Apache depends on OS)-->
+    <!--CreateDefaultBuilder() Method calls UseIIS() method behind the scene and hosts the app inside of the IIS worker process
+    (w3wp.exe[iis] or iisexpress.exe[iisexpress])-->
+    <!---->
+    <!--InProcess hosting delivers significantly higher request throuput than OutOfProcess hosting-->
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--PackageReference tagused to include a reference to the nuget package that is installed for the application-->
+    <!--Microsoft.AspNetCore.App it is a metapackage
+    it just contains a list of dependencies (other packages)-->
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

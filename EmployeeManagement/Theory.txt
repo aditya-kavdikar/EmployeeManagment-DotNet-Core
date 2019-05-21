@@ -1,0 +1,20 @@
+﻿Kestrel Server-
+1)it is a cross platform web server for for ASP.NET core
+2)it is included by default as internal server for .net core
+3)kestrel can be used, by itself as an edge server to listen incoming http request
+4)the process used to host the app is dotnet.exe
+
+dotnet core CLI Tool
+it is used to run ,build and create dotnet core app on any platform similar to Visual studio
+to use this use command- "dotnet --help" in cmd
+whenever we run app from
+<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+
+Inprocess hosting
+as per performance point of view inprocess hosting is better than OutOfProcess hosting
+
+
+OutOfProcess Hosting
+there are two ways to host app in OutOfProcess Hosting
+1)Kestrel can be used as the internet facing web server
+2)kestrel can be used in combination with reverse proxy server
